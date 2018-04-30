@@ -1,6 +1,6 @@
 # I Love Layovers
 
-#### _A fun app to help a user find the most inconvenient, torturous flights that the internet has to offer._, {April 30, 2018}_
+#### _A fun app to help a account find the most inconvenient, torturous flights that the internet has to offer._, {April 30, 2018}_
 
 ### By Masen Matthews and Katie Fujihara
 

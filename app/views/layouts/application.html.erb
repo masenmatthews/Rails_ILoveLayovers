@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>ILoveLayovers</title>
+    <title>I Love Layovers</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
-  <body>
-    <div class="container">
-    <%= yield %>
-  </div>
+    <body>
+      <%= render 'layouts/navbar' %>
+      <div class="container">
+        <%= yield %>
+      </div>
   </body>
 </html>
