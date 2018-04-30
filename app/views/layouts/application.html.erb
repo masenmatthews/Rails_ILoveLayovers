@@ -7,11 +7,13 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Rubik" rel="stylesheet">
+
   </head>
     <body>
       <%= render 'layouts/navbar' %>
+      <li><h1>I Love Layovers™</h1></li>
       <div class="container">
-        <h1>I Love Layovers</h1>
         <%= yield %>
       </div>
   </body>

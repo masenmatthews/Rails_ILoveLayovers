@@ -1,8 +1,117 @@
-<% @products.each do |product| %>
- <p><%= product.name %> | <%= number_to_currency product.price %>
- <%= form_for @order_item do |f| %>
-   <%= f.hidden_field :product_id, value: product.id %>
-   <%= f.number_field :quantity %>
-   <%= f.submit "Add to cart" %>
- <% end %></p>
-<% end %>
+<h1>Check out our Add-ons!</h1>
+<div class="row">
+  <div class="col-md-4">
+    <div class="well add">
+      <h4>Bleach-Soaked Blanket</h4>
+      <p>Airplanes are very, very dirty. Luckily, bleach is not. Clean your skin, the seat you're sitting in, and stay warm with one handy do-it-all product!</p>
+      <h5>$<%= @products[0].price %></h5>
+        <%= form_for @order_item do |f| %>
+          <%= f.hidden_field :product_id, value: @products[0].id %>
+          Quantity: <%= f.number_field :quantity, value: 0, :class => "form" %>
+          <%= f.submit "Add to Cart", :class => "btn btn-primary"%>
+        <% end %></p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="well add">
+      <h4>Concrete-Stuffed Neck Pillow</h4>
+      <p>For those of us who like our pillows on the firm side. Worried about waking up with your neck hanging in an odd position? We guarantee you'll be holding still with this fine device!</p>
+      <h5>$<%= @products[1].price %></h5>
+        <%= form_for @order_item do |f| %>
+          <%= f.hidden_field :product_id, value: @products[1].id %>
+          Quantity: <%= f.number_field :quantity, value: 0, :class => "form" %>
+          <%= f.submit "Add to Cart", :class => "btn btn-primary"%>
+        <% end %></p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="well add">
+      <h4>Box of Candles</h4>
+      <h6>(Matches Prohibited by TSA)</h6>
+      <p>This is a standard box of candles. You can't light them on the airplane but we like to provide our loyal customers with a solid variety of options.</p>
+      <h5>$<%= @products[2].price %></h5>
+        <%= form_for @order_item do |f| %>
+          <%= f.hidden_field :product_id, value: @products[2].id %>
+          Quantity: <%= f.number_field :quantity, value: 0, :class => "form" %>
+          <%= f.submit "Add to Cart", :class => "btn btn-primary"%>
+        <% end %></p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="well add">
+      <h4>Plastic Bag Eye Mask</h4>
+      <p>I Love Layovers™ values sustainability. Get some shut eye with this 100% semi-recyclable eye mask!</p>
+      <h5>$<%= @products[3].price %></h5>
+        <%= form_for @order_item do |f| %>
+          <%= f.hidden_field :product_id, value: @products[3].id %>
+          Quantity: <%= f.number_field :quantity, value: 0, :class => "form" %>
+          <%= f.submit "Add to Cart", :class => "btn btn-primary"%>
+        <% end %></p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="well add">
+      <h4>First-Class Food Leftovers</h4>
+      <p>Looking for a taste of luxury? Tired of feeling like a plebian? Now you can shake that feeling for a few fleeting seconds by eating the leftovers that are generously donated by our wealthier, higher-class guests.</p>
+      <h5>$<%= @products[4].price %></h5>
+        <%= form_for @order_item do |f| %>
+          <%= f.hidden_field :product_id, value: @products[4].id %>
+          Quantity: <%= f.number_field :quantity, value: 0, :class => "form" %>
+          <%= f.submit "Add to Cart", :class => "btn btn-primary"%>
+        <% end %></p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="well add">
+      <h4>Sobbing Child Noise Generator</h4>
+      <p>It's easy to see why some people get annoyed by the sounds of children when they're soaring through the air in a giant metal death tube. Show that annoying kid across the aisle who's boss by drowning him out with your very own crying child sounds!</p>
+      <h5>$<%= @products[5].price %></h5>
+        <%= form_for @order_item do |f| %>
+          <%= f.hidden_field :product_id, value: @products[5].id %>
+          Quantity: <%= f.number_field :quantity, value: 0, :class => "form" %>
+          <%= f.submit "Add to Cart", :class => "btn btn-primary"%>
+        <% end %></p>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-4">
+    <div class="well add">
+      <h4>Leg Room Condenser</h4>
+      <p>What's with all the excess leg room on airplanes nowadays? This is an accesory for those of us who enjoy living small!</p>
+      <h5>$<%= @products[6].price %></h5>
+        <%= form_for @order_item do |f| %>
+          <%= f.hidden_field :product_id, value: @products[6].id %>
+          Quantity: <%= f.number_field :quantity, value: 0, :class => "form" %>
+          <%= f.submit "Add to Cart", :class => "btn btn-primary"%>
+        <% end %></p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="well add">
+      <h4>Undrinkable Tap Water</h4>
+      <p>Every cup of undrinkable air plane coffee starts with three things: undrinkable tap water, inedible expired coffee beans, and ambitions. I Love Layovers™ is taking things back to the roots by letting YOU control how you want your consumables to be experienced. We ask that you wait until we land to consume this because our jets are only equipped with one bathroom.</p>
+      <h6>Fun fact: Did you know that drinking tap water helps save the planet? Wow!</h6>
+      <h5>$<%= @products[7].price %></h5>
+        <%= form_for @order_item do |f| %>
+          <%= f.hidden_field :product_id, value: @products[7].id %>
+          Quantity: <%= f.number_field :quantity, value: 0, :class => "form" %>
+          <%= f.submit "Add to Cart", :class => "btn btn-primary"%>
+        <% end %></p>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="well add">
+      <h4>Chloroform Face Mask</h4>
+      <p>A clean face is a vital part of a good nights sleep. With our chloroform face wash, you can get a clean face and a good night's sleep in one handy swoop! Guarunteed to put you to sleep before you can say, "hm this kind of smells like chloroform"! Not suitable for children under 18, please ask your flight attendant for more safety information.</p>
+      <h5>$<%= @products[8].price %></h5>
+        <%= form_for @order_item do |f| %>
+          <%= f.hidden_field :product_id, value: @products[8].id %>
+          Quantity: <%= f.number_field :quantity, value: 0, :class => "form" %>
+          <%= f.submit "Add to Cart", :class => "btn btn-primary"%>
+        <% end %></p>
+    </div>
+  </div>
+</div>

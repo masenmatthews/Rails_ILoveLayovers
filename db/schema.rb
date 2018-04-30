@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_30_170409) do
+ActiveRecord::Schema.define(version: 2018_04_30_221033) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "accounts", force: :cascade do |t|
-    t.string "accountname"
+    t.string "username"
     t.string "email"
     t.boolean "admin", default: false
     t.string "password_hash"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2018_04_30_170409) do
     t.string "order_id"
     t.integer "product_id"
     t.integer "flight_id"
+    t.integer "quantity"
   end
 
   create_table "orders", force: :cascade do |t|
@@ -46,6 +47,10 @@ ActiveRecord::Schema.define(version: 2018_04_30_170409) do
     t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "quotes", force: :cascade do |t|
+    t.string "quote"
   end
 
 end

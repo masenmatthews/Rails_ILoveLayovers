@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :products
   resources :flights
   resources :about
+  resources :quotes
+  resources :order_items
 
   get '/signup' => 'accounts#new'
   post '/accounts' => 'accounts#create'
