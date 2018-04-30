@@ -11,4 +11,20 @@
 
 h1 {
   text-align: center;
+  font-size: 72px;
+ background: -webkit-linear-gradient(#ad5389, #3c1053);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  text-align: center;
+}
+
+.image {
+  width: 300px;
+  border-radius: 5%;
+}
+.team {
+  text-align: center;
 }

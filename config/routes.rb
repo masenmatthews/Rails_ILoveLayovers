@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   resources :products
   resources :flights
+  resources :about
 
   get '/signup' => 'accounts#new'
   post '/accounts' => 'accounts#create'
