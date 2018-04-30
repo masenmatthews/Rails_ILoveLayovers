@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2018_04_30_221033) do
   enable_extension "plpgsql"
 
   create_table "accounts", force: :cascade do |t|
-    t.string "username"
+    t.string "accountname"
     t.string "email"
     t.boolean "admin", default: false
     t.string "password_hash"

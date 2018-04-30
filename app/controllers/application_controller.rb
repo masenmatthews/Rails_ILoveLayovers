@@ -12,8 +12,8 @@ class ApplicationController < ActionController::Base
   end
 
   def current_account
-    if session[:account_id]
-      @current_account = Account.find(session[:account_id])
+    @current_account ||= Account.find(session[:user_id]) if session[:user_id]
+    rescue ActiveRecord::RecordNotFound
     end
   end
 
@@ -21,5 +21,4 @@ class ApplicationController < ActionController::Base
    if !current_account
      flash[:alert] = "You aren't authorized to visit that page."
    end
- end   
-end
+ end
