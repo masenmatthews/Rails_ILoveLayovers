@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  root :to => 'products#index'
+  root :to => 'welcome#index'
   resource :cart, only: [:show]
 
   resources :products
+  resources :flights
 
   get '/signup' => 'accounts#new'
   post '/accounts' => 'accounts#create'

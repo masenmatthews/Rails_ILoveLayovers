@@ -1,0 +1,11 @@
+<h1>I Love Layovers</h1>
+<div class="well findflight">
+  <h3>Find Your Flight</h3>
+  <%= form_tag flights_path do %>
+    <%= label_tag :origin %>
+    <%= text_field_tag :origin%>
+    <%= label_tag :destination %>
+    <%= text_field_tag :destination%>
+    <%= submit_tag "Go!", :class => "btn btn-primary" %>
+  <% end %>
+</div>
