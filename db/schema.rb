@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 2018_04_30_170409) do
     t.integer "price"
   end
 
-  create_table "orderitems", force: :cascade do |t|
+  create_table "order_items", force: :cascade do |t|
     t.string "order_id"
     t.integer "product_id"
     t.integer "flight_id"
