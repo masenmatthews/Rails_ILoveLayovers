@@ -19,8 +19,4 @@ class Account < ApplicationRecord
        nil
      end
    end
-
-   def send_welcome_message
-     AccountMailer.signup_confirmation(self).deliver
-   end
  end

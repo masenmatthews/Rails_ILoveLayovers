@@ -1,13 +1,12 @@
 class OrderItemsController < ApplicationController
 
   def create
-    @order = current_order
-    @item = @order.order_items.new(item_params)
-    @order.save!
-    session[:order_id] = @order.id
-    redirect_to cart_path
-    flash[:notice] = "ADDED"
-  end
+     @order = current_order
+     @item = @order.order_items.new(item_params)
+     @order.save!
+     session[:order_id] = @order.id
+     redirect_to cart_path
+   end
 
   def destroy
     @order = current_order
