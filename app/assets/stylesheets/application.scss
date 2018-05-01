@@ -1,6 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "materialize";
+@import "products";
 
 .findflight {
   display: block;
@@ -45,11 +46,6 @@ h2, h3, h4, h5 {
   width:50%;
   text-align:center;
 }
-.add {
-  height: 600px;
-  text-align: center;
-}
-
 .butt {
   max-height: 50px;
 }

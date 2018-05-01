@@ -3,10 +3,10 @@ class OrderItemsController < ApplicationController
   def create
     @order = current_order
     @item = @order.order_items.new(item_params)
-    @order.save
+    @order.save!
     session[:order_id] = @order.id
-    flash[:notice] = "ADDED"
     redirect_to cart_path
+    flash[:notice] = "ADDED"
   end
 
   def destroy
