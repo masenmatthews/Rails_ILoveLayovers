@@ -3,9 +3,10 @@ class Order < ApplicationRecord
   belongs_to :account, optional: :true
   before_create :update_status
 
-  # def calculate_total
-  #   self.order_items.collect { |item| item.product.price * item.quantity }.sum
-  # end
+  def calculate_total
+    self.order_items.collect { |item| item.product.price * item.quantity }.sum
+  end
+
   private
 
   def update_status
@@ -13,8 +14,8 @@ class Order < ApplicationRecord
       self.status = "In progress"
     end
   end
-#
-#   def update_total
-#     self.total_price = calculate_total
-#   end
-end
+
+  def update_total
+      self.total_price = calculate_total
+    end
+  end

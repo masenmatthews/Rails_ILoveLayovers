@@ -2,11 +2,11 @@
 
 <% if @order_items.any? %>
   <% @order_items.each do |item| %>
-    <p><%= item.product.name %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"} %></p>
+    <p><%= item.product.name %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "Are you sure?", :method => "delete"} %></p>
     <p> Unit Price: <%= number_to_currency item.product.price %> | Quantity: <%= item.quantity %> | Total Price: <%= number_to_currency (item.product.price * item.quantity) %></p>
     <h4>Checkout</h4>
     <label class="amount">
-      <span>Your Total is: <%= number_to_currency (item.product.price * item.quantity) %></span>
+        <p>Your Total: <%= number_to_currency @order %></p>
     </label>
   <% end %>
 <% else %>
@@ -25,5 +25,5 @@
   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
           data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
           data-description="Checkout:"
-          data-amount="500"
+          data-amount= <%=(@order * 100) %>
           data-locale="auto"></script>
