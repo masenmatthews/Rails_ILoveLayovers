@@ -2,7 +2,7 @@ class CartsController < ApplicationController
 
   def show
     @order_items = current_order.order_items
-    @order = current_order.calculate_total
+    @order = current_order.update_total
   end
 
   def create

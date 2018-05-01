@@ -7,6 +7,10 @@ class Order < ApplicationRecord
     self.order_items.collect { |item| item.product.price * item.quantity }.sum
   end
 
+  def update_total
+      self.total_price = calculate_total
+    end
+
   private
 
   def update_status
@@ -15,7 +19,5 @@ class Order < ApplicationRecord
     end
   end
 
-  def update_total
-      self.total_price = calculate_total
-    end
+
   end
