@@ -21,8 +21,22 @@
     2. Open the terminal and navigate to the project directory
     3. Run $ bundle or $ bundle install in the terminal
     4. Run $ rails db:create and $ rails db:migrate to establish database functionality
-    5. Run $ rails server
-    6. Navigate to localhost:3000 in Google Chrome or desired browser to view the site
+    5. Add code for the Stripe API:
+        * In config/initializers, add a file called stripe.rb
+        * Add the following line of code to stripe.rb
+          * Rails.configuration.stripe = {
+            :publishable_key => ENV['PUBLISHABLE KEY GOES HERE
+          '],
+            :secret_key => ENV['SECRET KEY GOES HERE
+          ']
+          }
+
+          Stripe.api_key = Rails.configuration.stripe[:secret_key]
+
+        * Navigate to the website for Stripe, sign in, and go to 'Developers' on the lefthand sidebar, and go to the 'API keys' section of the website. If you do not have API keys or an account, you will need to make one and request access to the API.
+        * Replace the 'publishable_key' and 'secret_key' sections of the above code snippet with your own keys and save the file.
+    6. Run $ rails server
+    7. Navigate to localhost:3000 in Google Chrome or desired browser to view the site
 
 ## Future expansion
 
