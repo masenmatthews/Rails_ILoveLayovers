@@ -18,10 +18,15 @@
 ## Setup/Installation Requirements
   This project can be installed and viewed by following these steps:
     1. Clone GitHub repository to desktop or desired directory
+    (<-- two spaces)
     2. Open the terminal and navigate to the project directory
+    (<-- two spaces)
     3. Run $ bundle or $ bundle install in the terminal
+    (<-- two spaces)
     4. Run $ rails db:create and $ rails db:migrate to establish database functionality
+    (<-- two spaces)
     5. Add code for the Stripe API:
+    (<-- two spaces)
         * In config/initializers, add a file called stripe.rb
         * Add the following line of code to stripe.rb
           * Rails.configuration.stripe = {
@@ -32,10 +37,12 @@
           }
 
           Stripe.api_key = Rails.configuration.stripe[:secret_key]
-
+   (<-- two spaces)
         * Navigate to the website for Stripe, sign in, and go to 'Developers' on the lefthand sidebar, and go to the 'API keys' section of the website. If you do not have API keys or an account, you will need to make one and request access to the API.
+   (<-- two spaces)
         * Replace the 'publishable_key' and 'secret_key' sections of the above code snippet with your own keys and save the file.
     6. Run $ rails server
+   (<-- two spaces)
     7. Navigate to localhost:3000 in Google Chrome or desired browser to view the site
 
 ## Future expansion
