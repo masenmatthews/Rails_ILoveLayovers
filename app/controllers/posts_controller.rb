@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @account= Account.find(session[:account_id])
+    @account = Account.find(session[:account_id])
     @post = @account.posts.new(post_params)
     if @post.save
       flash[:notice] = "Thanks, your post is has been added to the list!"
@@ -31,7 +31,7 @@ class PostsController < ApplicationController
   def destroy
     @post = Post.find(params[:id])
     @post.destroy
-    redirect_to posts_path
+    redirect_to post  _path
   end
 
   def update
@@ -46,6 +46,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.permit(:title, :body)
   end
 end

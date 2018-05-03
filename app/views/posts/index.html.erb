@@ -1,13 +1,35 @@
-<div class="row" id="container-post">
-  <%= render @posts %>
-</div>
+<div class="well" id="well1">
+    <div class="container">
+      <%= form_with(model: @post, local: true) do |form| %>
+        <%= form.label :title %>
+        <%= form.text_field :title, class: "post_title" %>
+        <br>
+        <%= form.label :body  %>
+        <%= form.text_field :body, class: "post_body" %>
+        <br>
 
-<%= form_for @post do |f| %>
-  <%= f.label :title %>
-  <%= f.text_field :title, class: "post_title" %>
-  <br>
-  <%= f.label :body  %>
-  <%= f.text_field :body, class: "post_body" %>
-  <br>
-  <%= f.submit %>
-<% end %>
+        <div class="actions">
+          <%= form.submit %>
+        </div>
+        <%end%>
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+    <% if @posts.any? %>
+      <ul>
+        <% @posts.each do |post| %>
+        <div class="well">
+        <h2 class="post-title"><%= post.title %></h2>
+        <hr>
+        <h4 class="post-body"><%= post.body %></h4>
+        <p><%= button_to "Delete post", {:controller => :post,
+              :action => 'destroy', :id => @post.id }, :method => :delete %></p>
+      </div>
+        <% end %>
+      </ul>
+      <% else %>
+      <p>There are no posts yet!</p>
+    <% end %>
+  </div>
