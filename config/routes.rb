@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   resources :quotes
   resources :order_items
   resources :charges
-  
+  resources :posts
+
   get '/signup' => 'accounts#new'
   post '/accounts' => 'accounts#create'
 
