@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
   def index
     @posts = Post.all
+    @post = Post.new
   end
 
   def new
@@ -9,13 +10,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    @account = Account.find(session[:account_id])
+    @account= Account.find(session[:account_id])
     @post = @account.posts.new(post_params)
     if @post.save
       flash[:notice] = "Thanks, your post is has been added to the list!"
       redirect_to posts_path
     else
-      render :new
+      render :index
     end
   end
 

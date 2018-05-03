@@ -1,0 +1,13 @@
+<div class="row" id="container-post">
+  <%= render @posts %>
+</div>
+
+<%= form_for @post do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title, class: "post_title" %>
+  <br>
+  <%= f.label :body  %>
+  <%= f.text_field :body, class: "post_body" %>
+  <br>
+  <%= f.submit %>
+<% end %>
